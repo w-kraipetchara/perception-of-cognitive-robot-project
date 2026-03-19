@@ -1,0 +1,59 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/devices/slamtec/protos/RpLidarA2.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/apartment_structure/protos/Wall.proto"
+
+WorldInfo {
+  info [
+    ""
+  ]
+  FPS 120
+  contactProperties [
+    ContactProperties {
+      material1 "obstacle"
+      material2 "wall"
+      coulombFriction [
+        0
+      ]
+      bounce 1
+    }
+  ]
+}
+Viewpoint {
+  orientation 0.04892098576362402 -0.9982591024667467 0.032946949694938756 5.101102778793619
+  position -1.2589250703579662 -0.4959236543149852 3.0407781421045494
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  translation -0.2 0 0
+  contactMaterial "wall"
+  floorSize 1 1.5
+  wallHeight 0.4
+}
+E-puck {
+  translation -0.2 0 -6.39622e-05
+  rotation 1 0 0 2.4407252431727782e-09
+  controller "epuck_slam_controller"
+  controllerArgs [
+    "string"
+  ]
+  camera_fieldOfView 1.1
+  camera_width 640
+  camera_height 480
+  turretSlot [
+    RpLidarA2 {
+      translation 0.01 0 0.031
+      name "lidar"
+    }
+  ]
+}
+Wall {
+  size 0.05 0.5 0.2
+}

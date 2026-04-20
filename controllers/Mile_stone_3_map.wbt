@@ -1,0 +1,79 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/devices/slamtec/protos/RpLidarA2.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/apartment_structure/protos/Wall.proto"
+
+WorldInfo {
+  info [
+    ""
+  ]
+  FPS 120
+  contactProperties [
+    ContactProperties {
+      material1 "obstacle"
+      material2 "wall"
+      coulombFriction [
+        0
+      ]
+      bounce 1
+    }
+  ]
+}
+Viewpoint {
+  orientation 0.5390855511338798 -0.5371373838398152 -0.6487450958892871 4.293890717595319
+  position -0.45265939265583793 -0.6813579414425108 4.558023796774832
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  translation -0.2 0 0
+  contactMaterial "wall"
+  floorSize 3 3
+  wallThickness 0.05
+  wallHeight 0.5
+}
+E-puck {
+  translation -0.2 0 -6.39622e-05
+  rotation 1 0 0 2.4407252431727782e-09
+  controller "epuck_graphslam_controller"
+  controllerArgs [
+    "string"
+  ]
+  camera_fieldOfView 1.1
+  camera_width 640
+  camera_height 480
+  turretSlot [
+    RpLidarA2 {
+      translation 0.01 0 0.031
+      name "lidar"
+    }
+  ]
+}
+Wall {
+  translation 0.3 0 0
+  size 0.05 0.5 0.5
+}
+Wall {
+  translation -0.45 0.75 0
+  rotation 0 0 1 -1.5707953071795862
+  name "wall(1)"
+  size 0.05 0.5 0.5
+}
+Wall {
+  translation -0.954053 -0.190799 0
+  rotation 0 0 1 0.785398
+  name "wall(2)"
+  size 0.05 0.5 0.5
+}
+Wall {
+  translation -0.600503 -0.544349 0
+  rotation 0 0 1 0.785398
+  name "wall(3)"
+  size 0.05 0.5 0.5
+}

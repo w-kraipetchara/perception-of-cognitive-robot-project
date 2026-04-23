@@ -1,0 +1,55 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/robots/gctronic/e-puck/protos/E-puck.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2025a/projects/objects/balls/protos/Ball.proto"
+
+WorldInfo {
+  info [
+    ""
+  ]
+  FPS 120
+  contactProperties [
+    ContactProperties {
+      material1 "obstacle"
+      material2 "wall"
+      coulombFriction [
+        0
+      ]
+      bounce 1
+    }
+  ]
+}
+Viewpoint {
+  orientation -0.04358300994666338 0.9595184888321132 0.2782531057029317 0.32368842893305644
+  position -1.9979831459680653 -0.17818257978703106 0.7228684976848821
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  contactMaterial "wall"
+}
+E-puck {
+  translation 0 0 -6.41314e-05
+  rotation 0 0 0.9999999999999999 0
+}
+Ball {
+  translation 0.25 0 0.15
+  mass 0.5
+  linearDamping 0
+  angularDamping 0
+  contactMaterial "obstacle"
+}
+Ball {
+  translation 0.26 -0.12 0.12
+  name "ball(1)"
+  color 0.465187 0.952438 0.227359
+  mass 0.5
+  linearDamping 0
+  angularDamping 0
+  contactMaterial "obstacle"
+}
